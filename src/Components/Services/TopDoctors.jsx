@@ -53,10 +53,15 @@ export default function TopDoctors({ activeTab }) {
     <div className="">
       {activeTab === "Top Doctors" && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map((service) => (
-            <div className="bg-white">
+          {services.map((service, i) => (
+            <div key={i} className="bg-white">
               <div className="bg-[#4CB6B6] p-6 max-w-fit m-auto mt-12	">
-                <Image className="m-auto" src={service.icon} alt="service3" width={60} />
+                <Image
+                  className="m-auto"
+                  src={service.icon}
+                  alt="service3"
+                  width={60}
+                />
               </div>
               <div key={service.title} className="card">
                 <h3 className="text-[#4CB6B6] text-2xl lg:text-4xl m-auto max-w-48	pt-6">

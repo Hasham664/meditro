@@ -53,8 +53,8 @@ export default function Hospitals({activeTab}) {
     <div className="">
       {activeTab === "Hospitals" && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map((service) => (
-            <div className="bg-white">
+          {services.map((service, i) => (
+            <div key={i} className="bg-white">
               <div className="bg-[#4CB6B6] p-6 max-w-fit m-auto mt-12	">
                 <Image className="m-auto" src={service.icon} alt="service2" width={60} />
               </div>
